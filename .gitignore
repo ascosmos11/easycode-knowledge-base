@@ -1,0 +1,8 @@
+audit_work/.env.teamly
+audit_work/teamly_tokens.json
+audit_work/teamly_api_cache/
+.DS_Store
+audit_work/
+telegram_filtered/
+__pycache__/
+scripts/__pycache__/

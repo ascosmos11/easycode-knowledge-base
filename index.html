@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>База знаний для преподавателей EasyCode</title>
+    <meta
+      name="description"
+      content="Резервная база знаний для преподавателей EasyCode с полными текстами статей."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="База знаний EasyCode">
+        <span class="brand-mark">EC</span>
+        <span>
+          <strong>EasyCode</strong>
+          <small>База знаний для преподавателей</small>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <span id="articleCount">0 статей</span>
+        <button id="mediaToggle" type="button" aria-pressed="false">Места для фото</button>
+        <button id="clearButton" type="button">Сбросить</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Навигация по базе знаний">
+        <div class="search-panel">
+          <label class="field">
+            <span>Поиск</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Замены, ОС, LiveDigital, слоты..."
+              autocomplete="off"
+            />
+          </label>
+
+          <label class="field">
+            <span>Раздел</span>
+            <select id="sectionFilter">
+              <option value="all">Все разделы</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="sidebar-heading">
+          <h2>Материалы</h2>
+          <span id="visibleCount">0</span>
+        </div>
+        <nav id="articleList" class="article-list"></nav>
+      </aside>
+
+      <section class="reader" aria-live="polite">
+        <div id="emptyState" class="empty-state" hidden>
+          Ничего не нашлось. Попробуйте другой запрос или выберите другой раздел.
+        </div>
+
+        <article id="articleView" class="article-view">
+          <p class="eyebrow">Резервная база</p>
+          <h1>База знаний для преподавателей</h1>
+          <p class="lead">
+            Здесь можно читать статьи без доступа к Teamly. Выберите материал слева или воспользуйтесь поиском.
+          </p>
+          <div class="quick-stats">
+            <div>
+              <strong id="totalCount">0</strong>
+              <span>статей</span>
+            </div>
+            <div>
+              <strong id="sectionCount">0</strong>
+              <span>разделов</span>
+            </div>
+            <div>
+              <strong>offline</strong>
+              <span>без Teamly</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="data/teamly_articles.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
