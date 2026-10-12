@@ -410,6 +410,40 @@ h1 {
   margin-bottom: 0;
 }
 
+.method-recovery {
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.method-db-block {
+  margin: 22px 0;
+}
+
+.method-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.method-link-card {
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.method-link-card h4 {
+  margin: 0 0 10px;
+  color: #0b2e73;
+  font-size: 1rem;
+}
+
+.method-link-card ul {
+  margin: 0;
+}
+
 .article-content li + li {
   margin-top: 6px;
 }
