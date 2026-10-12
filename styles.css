@@ -410,10 +410,64 @@ h1 {
   margin-bottom: 0;
 }
 
+.method-jump-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 22px 0 10px;
+}
+
+.method-jump-card {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  padding: 16px 18px;
+  color: #0b2e73;
+  font-weight: 800;
+  text-decoration: none;
+  background: linear-gradient(135deg, #eef7ff 0%, #dcefff 100%);
+  border: 1px solid #b9ddff;
+  border-radius: 8px;
+  box-shadow: 0 10px 22px rgba(28, 112, 202, 0.08);
+}
+
+.method-jump-card:hover {
+  transform: translateY(-1px);
+  border-color: #75b9ff;
+  box-shadow: 0 14px 26px rgba(28, 112, 202, 0.14);
+}
+
 .method-recovery {
-  margin-top: 34px;
-  padding-top: 22px;
+  margin-top: 18px;
+  padding: 20px;
+  background: #f8fbff;
+  border: 1px solid #d8ecff;
+  border-radius: 8px;
+}
+
+.method-recovery h2 {
+  margin-top: 0;
+  color: #0b2e73;
+}
+
+.method-recovery details {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.method-recovery summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #17345f;
+}
+
+.method-recovery + p {
+  margin-top: 28px;
   border-top: 1px solid var(--line);
+  padding-top: 22px;
 }
 
 .method-db-block {
