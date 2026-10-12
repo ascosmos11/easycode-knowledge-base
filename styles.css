@@ -384,6 +384,32 @@ h1 {
   padding-left: 1.35rem;
 }
 
+.layout-section {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0;
+  overflow-x: auto;
+}
+
+.layout-column {
+  flex: 1 1 var(--column-width, 33%);
+  min-width: 220px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.layout-column p:first-child {
+  margin-top: 0;
+  color: #0b2e73;
+  font-weight: 900;
+}
+
+.layout-column p:last-child {
+  margin-bottom: 0;
+}
+
 .article-content li + li {
   margin-top: 6px;
 }
@@ -521,6 +547,16 @@ code {
 
   .quick-stats {
     grid-template-columns: 1fr;
+  }
+
+  .layout-section {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .layout-column {
+    flex-basis: auto;
+    min-width: 0;
   }
 }
 
